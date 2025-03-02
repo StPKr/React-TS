@@ -1,5 +1,19 @@
+interface Person {
+    name: string,
+    age: number,
+    isMarried: boolean,
+}
 
-
-export const Person = () => {
-    return  <div>Person</div>
+export const Person = (props: Person) => {
+    return <div>
+        <p>
+            Name: {props.name}
+        </p>
+        <p>
+            Age: {props.age}
+        </p>
+        <p>
+            This person {props.isMarried ? "is married" : "is single"}
+        </p>
+    </div>
 }
