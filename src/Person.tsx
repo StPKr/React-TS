@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { UserContext } from "./UserContextProvider";
 
 interface Person {
     name: string,
@@ -23,6 +24,8 @@ export const Person = (props: Person) => {
         event.preventDefault();
 
     }
+
+    // const { users, addUser, updateUser, deleteUser } = useContext(UserContext);
 
     return <div>
         {isShowInfo && (<>
